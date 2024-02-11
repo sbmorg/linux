@@ -2,57 +2,57 @@ for (( ; ; ))
 do
   
 
-echo "******menu*******"
-echo "1. Create a file"
-echo "2. Delete a file"
-echo "3. Create a directory"
-echo "4. Delete a directory"
-echo "5. Rename a file/directory"
-echo "6. Print current date / time"
-echo "7. Exit"
-echo "Enter your choice"
-read num
-case $num in
-1)
-       read -p "Enter File Name: " fname
-       echo "File Name is $fname"
-	touch  $fname
-    ;;
-2)
-	 read -p "Enter File Name to delete: " fdel
-       echo "File Name to delete is $fdel"
-	rm $fdel
-   
-    ;;
-3)
-	read -p "Enter Directory Name: " dname
-       echo "Directory Name is $dname"
-	mkdir  $dname
-    
-    ;;
-4)
-	read -p "Enter Directory Name to delete: " ddel
-       echo "Directory Name to delete is $ddel"
-	rm -rf $ddel
-   
-    ;;
-5)
-	read -p "Enter file/diectory Name to rename: " rfd
-       echo "File/Directory Name to rename is $rfd"
-	read -p "Enter new file/diectory Name : " rfdn
-	mv $rfd $rfdn
-   
-
-    ;;
-6)
-    date
-    ;;
-7)
-    exit
-    ;;
-*)
-    echo "invalid choice"
-    ;;
-esac
+	echo "******menu*******"
+	echo "1. Create a file"
+	echo "2. Delete a file"
+	echo "3. Create a directory"
+	echo "4. Delete a directory"
+	echo "5. Rename a file/directory"
+	echo "6. Print current date / time"
+	echo "7. Exit"
+	echo "Enter your choice"
+	read num
+	case $num in
+	1)
+	       	read -p "Enter File Name: " fname
+	       	echo "File Name is $fname"
+	       	touch  $fname
+	    ;;
+	2)
+	       	read -p "Enter File Name to delete: " fdel
+	       	echo "File Name to delete is $fdel"
+	       	rm $fdel
+	   
+	    ;;
+	3)
+	       	read -p "Enter Directory Name: " dname
+	       	echo "Directory Name is $dname"
+	       	mkdir  $dname
+	    
+	    ;;
+	4)
+	       	read -p "Enter Directory Name to delete: " ddel
+	       	echo "Directory Name to delete is $ddel"
+	       	rm -rf $ddel
+	   
+	    ;;
+	5)
+	       	read -p "Enter file/diectory Name to rename: " rfd
+		echo "File/Directory Name to rename is $rfd"
+		read -p "Enter new file/diectory Name : " rfdn
+		mv $rfd $rfdn
+	   
+	
+	    ;;
+	6)
+	    date
+	    ;;
+	7)
+	    exit
+	    ;;
+	*)
+	    echo "invalid choice"
+	    ;;
+	esac
 
 done
